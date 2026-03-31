@@ -203,69 +203,76 @@ The following examples are illustrative rather than exhaustive. English glosses 
 ### Epistemic stance
 
 ```
+ʖ @door_open
 shi @door_open
 KNOW @door_open
 ```
 
 ```
+ϕ @door_open
 vek @door_open
 BELIEVE @door_open
 ```
 
 Glyphs / phonetics:
-- `shi` = knowledge
-- `vek` = belief / assumption
+- ʖ `shi` = knowledge
+- ϕ `vek` = belief / assumption
 
 These are not the same statement. Noe makes evidentiary stance structurally explicit. A system that receives `shi @door_open` is being told the claim is grounded at the knowledge tier. A system that receives `vek @door_open` is being told it rests on weaker footing.
 
 ### Higher-order epistemic structure
 
 ```
+𐌙 ʖ ɨ 𐌸 ϕ ɨ 𐌙 𐌈 φ
 dai shi da syl vek da dai nai sha
 SELF KNOW THAT OTHER BELIEVE THAT SELF NOT CERTAIN
 ```
 
 Glyphs / phonetics:
-- `dai` = self / I
-- `da` = that (clause introducer)
-- `syl` = you / other
-- `nai` = not
-- `sha` = certainty
+- 𐌙 `dai` = self / I
+- ɨ `da` = that (clause introducer)
+- 𐌸 `syl` = you / other
+- 𐌈 `nai` = not/negation
+- φ `sha` = certainty
 
 "I know that you believe I am not certain." This is not a flat assertion or a sensor predicate. It is nested symbolic structure over epistemic stance, expressed directly in the protocol rather than paraphrased in natural language or encoded in application metadata.
 
 ### Valence and intensity
 
 ```
+𐌙 𐌹 𐌵
 dai es fel
 SELF IS JOY
 
+𐌙 𐌹 𐌵´
 dai es fel´
 SELF IS LOW_JOY (scalar 0.3)
 
+𐌙 𐌹 𐌵°
 dai es fel°
 SELF IS STRONG_JOY (scalar 0.9)
 ```
 
 Glyphs / phonetics:
-- `es` = copula / is
-- `fel` = joy / positive valence
+- 𐌹 `es` = copula / is
+- 𐌵 `fel` = joy / positive valence
 - `´` (phonetic: -a) = low intensity, scalar 0.3
 - `°` (phonetic: -o) = high intensity, scalar 0.9
 
 Noe treats affect as a first-class symbolic domain, not as a tag or emoji. Intensity is scalar and typed: `´` maps to 0.3, unmarked to 0.6, `°` to 0.9. These are fixed scalars defined in NIP-006, not arbitrary weights. Intensity modifies degree but never truth. `fel°` is strong joy. It is not "more true" than `fel´`.
 
 ```
-dai es dar°
-SELF IS STRONG_PAIN
+𐌙 𐌹 𐌈 ⌑°
+dai es nem°
+SELF IS NOT STRONG_CALM
 ```
 
 ```
+𐌸 𐌹 ⌑´
 syl es nem´
 OTHER IS LOW_CALM
 ```
 
-- `dar` = pain / negative valence
 - `nem` = calm / neutral valence
 
 The same scalar system works across the valence space. Any affective root can carry intensity without special-casing.
