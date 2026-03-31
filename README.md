@@ -244,33 +244,32 @@ Glyphs / phonetics:
 dai es fel
 SELF IS JOY
 
-𐌙 𐌹 𐌵´
-dai es fel´
-SELF IS LOW_JOY (scalar 0.3)
+𐌙 𐌹 𐌵'
+dai es fel'   (spoken: "fel-a")
+SELF IS DIMINISHED_JOY (scalar × 0.5)
 
 𐌙 𐌹 𐌵°
-dai es fel°
-SELF IS STRONG_JOY (scalar 0.9)
+dai es fel°   (spoken: "fel-o")
+SELF IS AMPLIFIED_JOY (scalar × 2.0)
 ```
 
 Glyphs / phonetics:
-- 𐌹 `es` = copula / is
 - 𐌵 `fel` = joy / positive valence
-- `´` (phonetic: -a) = low intensity, scalar 0.3
-- `°` (phonetic: -o) = high intensity, scalar 0.9
+- `'` (phonetic: -a) = diminished intensity, multiplier × 0.5
+- `°` (phonetic: -o) = amplified intensity, multiplier × 2.0
 
-Noe treats affect as a first-class symbolic domain, not as a tag or emoji. Intensity is scalar and typed: `´` maps to 0.3, unmarked to 0.6, `°` to 0.9. These are fixed scalars defined in NIP-006, not arbitrary weights. Intensity modifies degree but never truth. `fel°` is strong joy. It is not "more true" than `fel´`.
+Noe treats affect as a first-class symbolic domain, not as a tag or emoji. Intensity is scalar and typed: `'` multiplies by 0.5, unmarked (or explicit `"`) multiplies by 1.0, `°` multiplies by 2.0. These are multiplicative scaling factors defined in NIP-006, not arbitrary weights. Intensity modifies degree but never truth. fel° is amplified joy. It is not "more true" than fel'. The multiplier preserves the intrinsic magnitude of the target: diminished strong joy is still stronger than amplified mild discomfort.
 
 ```
 𐌙 𐌹 𐌈 ⌑°
-dai es nem°
+dai es nem-o
 SELF IS NOT STRONG_CALM
 ```
 
 ```
-𐌸 𐌹 ⌑´
-syl es nem´
-OTHER IS LOW_CALM
+𐌸 𐌹 ⌑'
+syl es nem-a
+OTHER IS DIMINISHED_CALM
 ```
 
 - `nem` = calm / neutral valence
